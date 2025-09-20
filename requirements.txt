@@ -1,0 +1,9 @@
+apache-airflow==2.8.1
+apache-airflow-providers-postgres==5.10.0
+apache-airflow-providers-http==4.6.0
+
+pandas==2.1.4
+requests==2.31.0
+psycopg2-binary==2.9.9
+
+python-dotenv==1.0.0
