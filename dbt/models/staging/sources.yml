@@ -1,0 +1,36 @@
+version: 2
+
+sources:
+  - name: public
+    description: "Raw crypto data from our ETL pipeline"
+    tables:
+      - name: crypto_prices
+        description: "Raw cryptocurrency price data from CoinGecko"
+        columns:
+          - name: id
+            description: "Primary key"
+            tests:
+              - unique
+              - not_null
+          - name: coin_id
+            description: "CoinGecko coin identifier"
+            tests:
+              - not_null
+          - name: symbol
+            description: "Cryptocurrency symbol"
+            tests:
+              - not_null
+          - name: name
+            description: "Cryptocurrency name"
+            tests:
+              - not_null
+          - name: current_price
+            description: "Current price in USD"
+            tests:
+              - not_null
+          - name: market_cap
+            description: "Market capitalization"
+          - name: extraction_timestamp
+            description: "When the data was extracted"
+            tests:
+              - not_null
